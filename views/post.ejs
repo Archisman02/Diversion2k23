@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Hello</title>
+  </head>
+
+  <body>
+    <form action="/posts/create" enctype="multipart/form-data" method="post">
+      <textarea
+        id="details"
+        name="details"
+        rows="4"
+        cols="40"
+        placeholder="Enter Details..."
+      ></textarea>
+      <input type="number" name="contact" placeholder="contact" />
+      <input type="email" name="email" placeholder="email" />
+      <input type="file" name="avatar" placeholder="picture" />
+      <input type="submit" value="Post" />
+    </form>
+  </body>
+</html>

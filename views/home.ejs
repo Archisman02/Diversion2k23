@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid nav">
+          <a class="navbar-brand title mx-3" href="#">Petto World</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  ><i class="far fa-bell"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="far fa-message"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/users/create-session"
+                  ><i class="fa-regular fa-user"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <% if(locals.user){%>
+          <h5 class="username"><%= user.name %></h4>
+          <a class="btn btn-primary" href="/users/sign-out">Logout</a>
+          <% }else{ %>
+          <a
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            href="#exampleModalToggle"
+            role="button"
+            >Login</a
+          >
+          <% } %>
+        </div>
+      </nav>
+    </header>
+
+    <div
+      class="modal fade"
+      id="exampleModalToggle"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="login-container">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <form action="/users/create-session" method="post">
+              <h1>Login</h1>
+              <label for="username">Username</label>
+              <input type="text" id="username" name="name" />
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" />
+              <button type="submit">Sign in</button>
+            </form>
+            <p class="register_link">
+              not a member? <a href="/users/sign-up">Register</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------MAIN----------------------->
+    <main>
+      <div class="container">
+        <!--left-sidebar-->
+        <div class="left-sidebar">
+          <div class="imp-links">
+            <a class="menu-item">
+              <span><i class="fas fa-home"></i></span>
+              <h4>All</h4>
+            </a>
+
+            <a class="menu-item">
+              <span><i class="fa-solid fa-dog"></i></span>
+              <h4>Dogs</h4>
+            </a>
+
+            <a class="menu-item">
+              <span><i class="fa-solid fa-cat"></i></span>
+              <h4>Cat</h4>
+            </a>
+
+            <a class="menu-item">
+              <span><i class="fas fa-crow"></i></span>
+              <h4>Birds</h4>
+            </a>
+
+            <a class="menu-item">
+              <span class="rabbit"><img src="/images/rabbit.png" /></span>
+              <h4>Rabbit</h4>
+            </a>
+
+            <a href="#">See more</a>
+
+            <a href="/posts/create-post" class="btn btn-primary" >Create post</a>
+          </div>
+        </div>
+
+        <!--content-->
+        <div class="content">
+          <h3>Welcome to our pet adoption site</h3>
+          <div class="card-container">
+            <div class="card">
+              <img src="/images/pexels-pixabay-39317.jpg" alt="img" />
+              <div class="card-content">
+                <h2 class="card-title">Doggy</h2>
+                <button class="card-button">Contact</button>
+                <button class="card-button">Details</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="/images/pexels-pixabay-326900.jpg" alt="img" />
+              <div class="card-content">
+                <h2 class="card-title">Birb</h2>
+                <button class="card-button">Contact</button>
+                <button class="card-button">Details</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="/images/GettyImages-1175550351.jpg" alt="img" />
+              <div class="card-content">
+                <h2 class="card-title">Catto</h2>
+                <button class="card-button">Contact</button>
+                <button class="card-button">Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://kit.fontawesome.com/930a638e20.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

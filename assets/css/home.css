@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap");
+
+:root {
+  --color-white: hsl(252, 30%, 100%);
+  --color-light: hsl(252, 30%, 95%);
+  --color-gray: hsl(252, 15%, 65%);
+  --color-dark: hsl(252, 30%, 17%);
+  --color-black: hsl(252, 30%, 10%);
+
+  --border-radius: 2rem;
+  --card-border-radius: 1rem;
+  --search-padding: 0.6rem 1rem;
+  --card-padding: 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.profile-photo {
+  width: 2.7rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.text-bold {
+  font-weight: 500;
+}
+
+.text-muted {
+  color: gray;
+}
+
+.menu-item {
+  color: #333;
+  cursor: pointer;
+}
+
+header {
+  background-color: #ffd1dc;
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  margin: 0;
+  font-size: 2em;
+  text-align: left;
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+}
+
+.username {
+  color: #666;
+  margin-right: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-color: black;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff8c9e;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #d35870;
+}
+
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #ff8c9e !important;
+  border-color: black !important;
+}
+
+.register_link {
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 5%;
+}
+
+.left-sidebar {
+  flex-basis: 25%;
+  position: fixed;
+  top: 150px;
+  align-items: flex-start;
+  border-radius: 4px;
+  padding: 30px;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.left-sidebar:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.right-sidebar {
+  flex-basis: 25%;
+  position: sticky;
+  top: 70px;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: whitesmoke;
+}
+
+.imp-links a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  width: fit-content;
+  margin-top: 20px;
+}
+
+.imp-links a h4 {
+  margin-left: 15px;
+}
+
+.imp-links a img {
+  width: 20px;
+}
+
+.sidebar-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.sidebar-title h4 {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.sidebar-title a {
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+}
+
+.content {
+  margin-left: 200px;
+  padding: 20px;
+  flex-basis: 80%;
+}
+
+/* Style the horizontal card container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+/* Style the horizontal cards */
+.card {
+  width: 30%;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Change the card shadow on hover */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Style the card image */
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0px 0px;
+}
+
+/* Style the card content */
+.card-content {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the card title */
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style the card price */
+.card-price {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Style the card button */
+.card-button {
+  background-color: #ff8c9e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* Change the card button color on hover */
+.card-button:hover {
+  background-color: #d35870;
+}
+
+.content h3 {
+  font-family: "Shantell Sans", cursive;
+}
+
+.menu-item {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.menu-item:hover {
+  background-color: gainsboro;
+}
