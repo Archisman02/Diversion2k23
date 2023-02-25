@@ -22,13 +22,6 @@ body {
   overflow-x: hidden;
 }
 
-.profile-photo {
-  width: 2.7rem;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
 .text-bold {
   font-weight: 500;
 }
@@ -133,7 +126,7 @@ button[type="submit"]:hover {
 .left-sidebar {
   flex-basis: 25%;
   position: fixed;
-  top: 150px;
+  top: 100px;
   align-items: flex-start;
   border-radius: 4px;
   padding: 30px;
@@ -201,13 +194,16 @@ button[type="submit"]:hover {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
   margin-top: 4px;
 }
 
 /* Style the horizontal cards */
 .card {
+  display: flex;
+  flex-direction: column; 
   width: 30%;
+  margin: 0 1rem 0;
   margin-bottom: 20px;
   border: 1px solid #ddd;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -219,10 +215,11 @@ button[type="submit"]:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Style the card image */
+/* Style the card image  */
 .card img {
   width: 100%;
-  height: auto;
+  height: 200px;
+  /* object-fit: cover; */
   border-radius: 5px 5px 0px 0px;
 }
 
@@ -274,4 +271,9 @@ button[type="submit"]:hover {
 
 .menu-item:hover {
   background-color: gainsboro;
+}
+
+.button-link{
+  text-decoration: none;
+  color: white;
 }

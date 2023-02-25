@@ -10,7 +10,7 @@ const postSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    contactNo: {
+    contact: {
       type: Number,
       required: true,
     },
@@ -19,9 +19,13 @@ const postSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    // avatar: {
-    //   type: String,
-    // },
+    avatar: {
+      type: String,
+    },
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
   },
   {
     timestamps: true,

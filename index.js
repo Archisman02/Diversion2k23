@@ -54,6 +54,7 @@ app.use(passport.setAuthenticatedUser);
 // app.use(express.static("public"));
 
 app.use(express.static("assets"));
+app.use("/uploads", express.static(__dirname + '/uploads'))
 
 app.use("/", require("./routes/index"));
 

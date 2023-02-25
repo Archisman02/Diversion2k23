@@ -134,29 +134,16 @@
         <div class="content">
           <h3>Welcome to our pet adoption site</h3>
           <div class="card-container">
-            <div class="card">
-              <img src="/images/pexels-pixabay-39317.jpg" alt="img" />
-              <div class="card-content">
-                <h2 class="card-title">Doggy</h2>
-                <button class="card-button">Contact</button>
-                <button class="card-button">Details</button>
+            <% for(post of posts){ %>
+              <div class="card">
+                <img src="<%= post.avatar %>" class="img-thumbnail" alt="responsive image" >
+                <!-- <div class="card-image-container"></div> -->
+                <div class="card-content">
+                  <h2 class="card-title">Doggy</h2>
+                  <button class="btn btn-primary"><a class="button-link" href="/contact/<%= post._id %>">Contact</a></button>
+                </div>
               </div>
-            </div>
-            <div class="card">
-              <img src="/images/pexels-pixabay-326900.jpg" alt="img" />
-              <div class="card-content">
-                <h2 class="card-title">Birb</h2>
-                <button class="card-button">Contact</button>
-                <button class="card-button">Details</button>
-              </div>
-            </div>
-            <div class="card">
-              <img src="/images/GettyImages-1175550351.jpg" alt="img" />
-              <div class="card-content">
-                <h2 class="card-title">Catto</h2>
-                <button class="card-button">Contact</button>
-                <button class="card-button">Details</button>
-              </div>
+            <% } %>
             </div>
           </div>
         </div>
