@@ -6,10 +6,14 @@ const db = require("./config/mongoose");
 const session = require("express-session");
 const passport = require("passport");
 const passportLocal = require("./config/passport-local-strategy");
+const MongoStore = require("connect-mongo");
+const flash = require("connect-flash");
 // const ejs = require("ejs");
 // const bodyParser = require("body-parser");
 const client = require('twilio')('ACd398ec6f0effa04142c044f51f544237', '25338206a5dd3912c31e3227dcc63506');
 const { MessagingResponse } = require('twilio').twiml;
+const customeMware = require('./config/middleware');
+
 const app = express();
 
 // app.get("/", function (req, res) {
@@ -45,6 +49,10 @@ app.use(
     cookie: {
       maxAge: 1000 * 60 * 100, // expires after this much minutes(in milliseconds)
     },
+    store: MongoStore.create({
+      mongoUrl: "mongodb://0.0.0.0:27017/codeial_development",
+      autoRemove: "disabled",
+    }),
   })
 );
 
@@ -52,6 +60,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(passport.setAuthenticatedUser);
+
+app.use(flash());
+
+app.use(customeMware.setFlash);
 
 // app.use(express.static("public"));
 
