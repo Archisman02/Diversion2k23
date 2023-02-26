@@ -10,6 +10,14 @@ const postSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    petName: {
+      type: String,
+      required: true,
+    },
+    category:{
+      type: String,
+      required: true,
+    },
     contact: {
       type: Number,
       required: true,

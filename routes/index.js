@@ -9,6 +9,7 @@ router.get("/", homeController.home);
 router.use("/users", require("./users"));
 router.use("/posts", require("./posts"));
 router.use("/contact", require("./contact"));
+router.use("/sms", require("./sms"));
 // router.get('/sign-in', usersController.signIn);
 // router.get('/sign-up', usersController.signUp);
 

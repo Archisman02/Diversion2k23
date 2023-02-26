@@ -8,16 +8,26 @@
     border-color: black !important;
   }
 
+  body{
+    background: rgb(255,208,241);
+    background: linear-gradient(90deg, rgba(255,208,241,1) 0%, rgba(249,225,198,1) 35%, rgba(255,192,174,1) 100%);
+  }
+
   .content {
     padding: 20px;
   }
 
   header {
     background-color: #ffd1dc;
+    border-radius: 5px;
     color: #fff;
     text-align: left;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .bg-light{
+    border-radius: 10px;
   }
 
   .title{

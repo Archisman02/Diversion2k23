@@ -38,18 +38,18 @@ textarea {
 	height: 100px;
 }
 
-button[type="submit"] {
-	color: white;
+.btn-primary {
+	color: white !important;
 	padding: 10px 20px;
 	border-radius: 5px;
 	cursor: pointer;
-    background-color:#ff8c9e;
+    background-color:#ff8c9e !important;
     border-color: black;
     margin-top: 20px;
 }
 
-button[type="submit"]:hover {
-	background-color: #d35870;
+.btn-primary:hover {
+	background-color: #d35870 !important;
 }
 
 h3{

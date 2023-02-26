@@ -17,6 +17,8 @@ module.exports.create = function (req, res) {
 
     Post.create({
       details: req.body.details,
+      petName: req.body.petName,
+      category: req.body.category,
       contact: req.body.contact,
       email: req.body.email,
       avatar: path.join(Post.avatarPath, req.file.filename),

@@ -63,7 +63,7 @@
 
    <!-- The content -->
    <div class="container py-3">
-    <div class="title h1 text-center">Details about the pet</div>
+    <div class="title h1 text-center"><%= post.petName %></div>
    
    <div class="card float-right">
     <div class="row">
@@ -73,10 +73,12 @@
       <div class="col-sm-7">
         <div class="card-block">
           <!--           <h4 class="card-title">Small card</h4> -->
-          <h4>Email: <%= post.email %> </h4>
-          <h4>Contact No:<%= post.contactNo %></h4> 
-          <p><%= post.details %></p>
-          <br>
+          <br><br>
+          <h3><%= post.details %></h3>
+          <br><br>
+          <h5>Contact No:<%= post.contact %></h5> 
+          <h5>Email: <%= post.email %></h5>
+           
           <!-- <a href="#" class="btn btn-primary btn-sm float-right">Contact</a> -->
         </div>
       </div>
